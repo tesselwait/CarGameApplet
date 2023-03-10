@@ -248,7 +248,7 @@ while quitVar == True:
         screen.blit(end_text, endTextRect)
 
 
-    if(a>1233):
+    if(a>1239):
         a=0
     if(h>t):
         h=0
