@@ -16,7 +16,7 @@ m = 240#user car height
 n = 1#end graphics variable
 crash=0
 l = 0#debris
-lFinal = 0#final debris
+
 bs = 7#body speed--higher number=slower speed
 rdstp = 0 #road stop
 
@@ -91,7 +91,7 @@ while quitVar == True:
     #car1
     car1 = pygame.Rect(775-h*cs, b, 80, 50)
     pygame.draw.rect(screen, BLACK, (774-h*cs, b-1,82, 52), border_radius=8)
-    pygame.draw.rect(screen, color1, (775-h*cs, b, 80, 50), border_radius=8)#775 500 shift
+    pygame.draw.rect(screen, color1, (775-h*cs, b, 80, 50), border_radius=8)
     pygame.draw.rect(screen, BLACK, (814-h*cs, b+6, 19, 40), border_radius=3)
     pygame.draw.rect(screen, light_grey, (815-h*cs, b+7, 17, 38), border_radius=3)#car1 windows front
     pygame.draw.rect(screen, BLACK, (784-h*cs, b+6, 12, 40), border_radius=2)
@@ -110,7 +110,7 @@ while quitVar == True:
     #car2
     car2 = pygame.Rect(775-z*cs, c, 80, 50)
     pygame.draw.rect(screen, BLACK, (774-z*cs, c-1,82, 52), border_radius=8)
-    pygame.draw.rect(screen, color2, (775-z*cs, c, 80, 50), border_radius=8)#775 500 shift
+    pygame.draw.rect(screen, color2, (775-z*cs, c, 80, 50), border_radius=8)
     pygame.draw.rect(screen, BLACK, (814-z*cs, c+6, 19, 40), border_radius=3)
     pygame.draw.rect(screen, light_grey, (815-z*cs, c+7, 17, 38), border_radius=3)#car2 windows front
     pygame.draw.rect(screen, BLACK, (784-z*cs, c+6, 12, 40), border_radius=2)
@@ -129,7 +129,7 @@ while quitVar == True:
     #car3
     car3 = pygame.Rect(775-w*cs, d, 80, 50)
     pygame.draw.rect(screen, BLACK, (774-w*cs, d-1,82, 52), border_radius=8)
-    pygame.draw.rect(screen, color3, (775-w*cs, d, 80, 50), border_radius=8)#775 500 shift
+    pygame.draw.rect(screen, color3, (775-w*cs, d, 80, 50), border_radius=8)
     pygame.draw.rect(screen, BLACK, (814-w*cs, d+6, 19, 40), border_radius=3)
     pygame.draw.rect(screen, light_grey, (815-w*cs, d+7, 17, 38), border_radius=3)#car3 windows front
     pygame.draw.rect(screen, BLACK, (784-w*cs, d+6, 12, 40), border_radius=2)
@@ -148,7 +148,7 @@ while quitVar == True:
     #car4
     car4 = pygame.Rect(775-v*cs, e, 80, 50)
     pygame.draw.rect(screen, BLACK, (774-v*cs, e-1,82, 52), border_radius=8)
-    pygame.draw.rect(screen, color4, (775-v*cs, e, 80, 50), border_radius=8)#775 500 shift
+    pygame.draw.rect(screen, color4, (775-v*cs, e, 80, 50), border_radius=8)
     pygame.draw.rect(screen, BLACK, (814-v*cs, e+6, 19, 40), border_radius=3)
     pygame.draw.rect(screen, light_grey, (815-v*cs, e+7, 17, 38), border_radius=3)#car4 windows front
     pygame.draw.rect(screen, BLACK, (784-v*cs, e+6, 12, 40), border_radius=2)
