@@ -167,30 +167,30 @@ while quit == False:
 #        pygame.draw.rect(screen, LANE, (100+(i*310)-a/rs, 369, 80, 5))
     #--------lane lines
     #car1
-    if b+turn1*h <= 55:
+    if b+turn1*h < 55:
         b=55-turn1*h
-    if b+turn1*h >= 395:
+    if b+turn1*h > 395:
         b=395-turn1*h
     car1 = pygame.Rect(775-h*cs, b+turn1*h, 80, 50)
     makeCar(h, b, turn1, cs, color1)
     #car2
-    if c+turn2*z <= 55:
+    if c+turn2*z < 55:
         c=55-turn2*z
-    if c+turn2*z >= 395:
+    if c+turn2*z > 395:
         c=395-turn2*z
     car2 = pygame.Rect(775-z*cs, c+turn2*z, 80, 50)
     makeCar(z, c, turn2, cs, color2)
     #car3
-    if d+turn3*w <= 55:
+    if d+turn3*w < 55:
         d=55-turn3*w
-    if d+turn3*w >= 395:
+    if d+turn3*w > 395:
         d=395-turn3*w
     car3 = pygame.Rect(775-w*cs, d+turn3*w, 80, 50)
     makeCar(w, d, turn3, cs, color3)
     #car4
-    if e+turn4*v <= 50:
+    if e+turn4*v < 50:
         e=55-turn4*v
-    if e+turn4*v >= 395:
+    if e+turn4*v > 395:
         e=395-turn4*v
     car4 = pygame.Rect(775-v*cs, e+turn4*v, 80, 50)
     makeCar(v, e, turn4, cs, color4)
