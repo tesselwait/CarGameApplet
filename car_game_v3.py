@@ -3,9 +3,10 @@ import random
 # Author: Robert Larson
 # Pygame translation of Java Applet
 # v3 - contains bug related to car distance not reseting on first play after resetting difficulty
+display_buffer = 0
 clock = pygame.time.Clock()
 
-def makeCar(pos_x, pos_y, turn, carspeed: list, color):
+def makeCar(pos_x, pos_y, turn, carspeed, color):
     pygame.draw.rect(screen, BLACK, (774-pos_x*carspeed, pos_y-1+(pos_x*turn),82, 52), border_radius=8)
     pygame.draw.rect(screen, color, (775-pos_x*carspeed, pos_y+(pos_x*turn), 80, 50), border_radius=8)
     #pygame.draw.rect(screen, BLACK, (814-pos_x*carspeed, pos_y+6, 19, 40), border_radius=3)
@@ -104,7 +105,6 @@ ORANGE = [255, 128, 0]
 
 quit = False
 while quit == False:
-    clock.tick(330)
     if start_flag:
         top_menu = True
         up=False
@@ -129,10 +129,10 @@ while quit == False:
         color2 = [random.randint(0, 255), random.randint(0, 255), random.randint(0, 255)]
         color3 = [random.randint(0, 255), random.randint(0, 255), random.randint(0, 255)]
         color4 = [random.randint(0, 255), random.randint(0, 255), random.randint(0, 255)]
-        turn1 = random.random()/3-.15
-        turn2 = random.random()/3-.15
-        turn3 = random.random()/3-.15
-        turn4 = random.random()/3-.15
+        turn1 = random.random()/3-.16
+        turn2 = random.random()/3-.16
+        turn3 = random.random()/3-.16
+        turn4 = random.random()/3-.16
         end_debris = []
         for i in range(0, 8):
             end_debris.append((random.randint(50, 130), random.randint(0, 80)))
@@ -368,5 +368,10 @@ while quit == False:
                 cs = 1.8 + 0.4*difficulty
                 if event.key == pygame.K_RETURN:
                     titleScreen = False
-    pygame.display.update()
+    if display_buffer%3==0:
+    	pygame.display.update()
+    display_buffer+=1
+    if display_buffer > 100000:
+        display_buffer=0
+    clock.tick(330)
 pygame.quit()
