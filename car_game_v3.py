@@ -80,7 +80,7 @@ def drawBody(k, m, l, bs, blood):
 rs = 0.2
 user_speed = 1.25
 difficulty = 1
-cs =  2.2 + 0.5*difficulty
+cs =  1.8 + 0.4*difficulty
 drive_mode = 0
 
 pygame.init()
