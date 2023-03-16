@@ -3,7 +3,6 @@ import random
 # Author: Robert Larson
 # Pygame translation of Java Applet
 # v3 - contains bug related to car distance not reseting on first play after resetting difficulty
-display_buffer = 0
 clock = pygame.time.Clock()
 
 def makeCar(pos_x, pos_y, turn, carspeed, color):
@@ -368,10 +367,6 @@ while quit == False:
                 cs = 1.8 + 0.4*difficulty
                 if event.key == pygame.K_RETURN:
                     titleScreen = False
-    if display_buffer%3==0:
-    	pygame.display.update()
-    display_buffer+=1
-    if display_buffer > 100000:
-        display_buffer=0
+    pygame.display.update()
     clock.tick(330)
 pygame.quit()
