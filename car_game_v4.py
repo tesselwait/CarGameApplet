@@ -2,7 +2,7 @@ import pygame
 import random
 # Author: Robert Larson
 # Pygame translation of Java Applet
-# v4 - contains bug related to car distance not reseting on first play after resetting traffic
+# v4 - contains bug related to car distance not resetting on first play after resetting traffic
 display_buffer = 0
 clock = pygame.time.Clock()
 
