@@ -73,7 +73,7 @@ def drawBody(k, m, l, bs, blood):
     pygame.draw.rect(screen, BLACK, (k+45+l/bs, m+5, 7, 2))#body arm
     pygame.draw.rect(screen, BLACK, (k+45+l/bs, m+17, 7, 2))#body arm
 
-rs = 0.2
+rs = 0.25
 difficulty = 1
 user_speed = 1+.12*difficulty
 cs =  1.8* + 0.4*difficulty
