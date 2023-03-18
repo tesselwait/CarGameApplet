@@ -391,6 +391,7 @@ while quit == False:
                     cs = 1.8 + 0.4*difficulty#2.8+0.4
                     user_speed = 1+.125*difficulty
                     titleScreen = False
-    pygame.display.update()
     clock.tick(330)
+    pygame.display.update()
+ 
 pygame.quit()
