@@ -5,35 +5,35 @@ import random
 # v4 - contains bug related to car distance not resetting on first play after resetting traffic
 clock = pygame.time.Clock()
 
-def makeCar(pos_x, pos_y, turn, carspeed, color):
-    pygame.draw.rect(screen, BLACK, (774-pos_x*carspeed, pos_y-1+pos_x*turn,82, 52), border_radius=8)
-    pygame.draw.rect(screen, color, (775-pos_x*carspeed, pos_y+pos_x*turn, 80, 50), border_radius=8)
-    pygame.draw.rect(screen, BLACK, (822-pos_x*carspeed, pos_y+7+pos_x*turn, 27, 1))#front accent top
-    pygame.draw.rect(screen, BLACK, (822-pos_x*carspeed, pos_y+42+pos_x*turn, 27, 1))#front accent bottom
-    #pygame.draw.rect(screen, WHITE, (775-pos_x*carspeed, pos_y+18+(pos_x*turn), 80, 6))#racing stripes
-    #pygame.draw.rect(screen, WHITE, (775-pos_x*carspeed, pos_y+28+(pos_x*turn), 80, 6))#racing stripes
-    pygame.draw.rect(screen, color, (780-pos_x*carspeed, pos_y+8+pos_x*turn, 6, 36))#---tail fin
-    pygame.draw.rect(screen, BLACK, (779-pos_x*carspeed, pos_y+6+pos_x*turn, 12, 2))#--
-    pygame.draw.rect(screen, BLACK, (779-pos_x*carspeed, pos_y+42+pos_x*turn, 12, 2))#//--
-    pygame.draw.rect(screen, BLACK, (778-pos_x*carspeed, pos_y+7+pos_x*turn, 1, 36))#--
-    pygame.draw.rect(screen, BLACK, (785-pos_x*carspeed, pos_y+7+pos_x*turn, 1, 36))#---tail fin
-    pygame.draw.rect(screen, light_grey, (810-pos_x*carspeed, pos_y+8+pos_x*turn, 12, 34), border_radius=3)# window front
-    pygame.draw.rect(screen, light_grey, (795-pos_x*carspeed, pos_y+8+pos_x*turn, 7, 34))#window back
-    pygame.draw.rect(screen, light_grey, (841-pos_x*carspeed, pos_y+1+pos_x*turn, 13, 6), border_radius=8)#head light top
-    pygame.draw.rect(screen, light_grey, (841-pos_x*carspeed, pos_y+43+pos_x*turn, 13, 6), border_radius=8)#head light bottom
-    pygame.draw.rect(screen, BLACK, (802-pos_x*carspeed, pos_y+8+pos_x*turn, 10, 1))#roof accent top
-    pygame.draw.rect(screen, BLACK, (802-pos_x*carspeed, pos_y+42+pos_x*turn, 10, 1))#roof accent bottom
-    pygame.draw.rect(screen, BLACK, (785-pos_x*carspeed, pos_y-2+pos_x*turn, 10, 2))#wheels--
-    pygame.draw.rect(screen, BLACK, (825-pos_x*carspeed, pos_y-2+pos_x*turn, 10, 2))#--
-    pygame.draw.rect(screen, BLACK, (785-pos_x*carspeed, pos_y+50+pos_x*turn, 10, 2))#--
-    pygame.draw.rect(screen, BLACK, (825-pos_x*carspeed, pos_y+50+pos_x*turn, 10, 2))#--wheels
-    pygame.draw.rect(screen, BLACK, (841-pos_x*carspeed, pos_y+1+pos_x*turn, 13, 6), 2, border_radius=8)
-    pygame.draw.rect(screen, BLACK, (841-pos_x*carspeed, pos_y+43+pos_x*turn, 13, 6), 2, border_radius=8)
-    pygame.draw.rect(screen, BLACK, (774-pos_x*carspeed, pos_y-1+pos_x*turn, 81, 51), 2, border_radius=10)
-    pygame.draw.rect(screen, BLACK, (810-pos_x*carspeed, pos_y+8+pos_x*turn, 12, 34), 2, border_radius=3)
-    pygame.draw.rect(screen, BLACK, (795-pos_x*carspeed, pos_y+8+pos_x*turn, 7, 34), 2)
+def makeCar(pos_x, pos_y, color):
+    pygame.draw.rect(screen, BLACK, (774-pos_x, pos_y-1,82, 52), border_radius=8)
+    pygame.draw.rect(screen, color, (775-pos_x, pos_y, 80, 50), border_radius=8)
+    pygame.draw.rect(screen, BLACK, (822-pos_x, pos_y+7, 27, 1))#front accent top
+    pygame.draw.rect(screen, BLACK, (822-pos_x, pos_y+42, 27, 1))#front accent bottom
+    #pygame.draw.rect(screen, WHITE, (775-pos_x, pos_y+18, 80, 6))#racing stripes
+    #pygame.draw.rect(screen, WHITE, (775-pos_x, pos_y+28, 80, 6))#racing stripes
+    pygame.draw.rect(screen, color, (780-pos_x, pos_y+8, 6, 36))#---tail fin
+    pygame.draw.rect(screen, BLACK, (779-pos_x, pos_y+6, 12, 2))#--
+    pygame.draw.rect(screen, BLACK, (779-pos_x, pos_y+42, 12, 2))#//--
+    pygame.draw.rect(screen, BLACK, (778-pos_x, pos_y+7, 1, 36))#--
+    pygame.draw.rect(screen, BLACK, (785-pos_x, pos_y+7, 1, 36))#---tail fin
+    pygame.draw.rect(screen, light_grey, (810-pos_x, pos_y+8, 12, 34), border_radius=3)# window front
+    pygame.draw.rect(screen, light_grey, (795-pos_x, pos_y+8, 7, 34))#window back
+    pygame.draw.rect(screen, light_grey, (841-pos_x, pos_y+1, 13, 6), border_radius=8)#head light top
+    pygame.draw.rect(screen, light_grey, (841-pos_x, pos_y+43, 13, 6), border_radius=8)#head light bottom
+    pygame.draw.rect(screen, BLACK, (802-pos_x, pos_y+8, 10, 1))#roof accent top
+    pygame.draw.rect(screen, BLACK, (802-pos_x, pos_y+42, 10, 1))#roof accent bottom
+    pygame.draw.rect(screen, BLACK, (785-pos_x, pos_y-2, 10, 2))#wheels--
+    pygame.draw.rect(screen, BLACK, (825-pos_x, pos_y-2, 10, 2))#--
+    pygame.draw.rect(screen, BLACK, (785-pos_x, pos_y+50, 10, 2))#--
+    pygame.draw.rect(screen, BLACK, (825-pos_x, pos_y+50, 10, 2))#--wheels
+    pygame.draw.rect(screen, BLACK, (841-pos_x, pos_y+1, 13, 6), 2, border_radius=8)
+    pygame.draw.rect(screen, BLACK, (841-pos_x, pos_y+43, 13, 6), 2, border_radius=8)
+    pygame.draw.rect(screen, BLACK, (774-pos_x, pos_y-1, 81, 51), 2, border_radius=10)
+    pygame.draw.rect(screen, BLACK, (810-pos_x, pos_y+8, 12, 34), 2, border_radius=3)
+    pygame.draw.rect(screen, BLACK, (795-pos_x, pos_y+8, 7, 34), 2)
 
-def makeUserCar(h, m):
+def makeUserCar(k, m):
     pygame.draw.rect(screen, BLACK, (k+10, m-2, 13, 1))#---wheels
     pygame.draw.rect(screen, BLACK, (k+60, m-2, 13, 1))#--
     pygame.draw.rect(screen, BLACK, (k+10, m+49, 13, 2))#--
@@ -60,17 +60,17 @@ def makeUserCar(h, m):
     pygame.draw.rect(screen, BLACK, (k+35, m+8, 12, 34), 2, border_radius=3)
     pygame.draw.rect(screen, BLACK, (k+20, m+8, 7, 34), 2)
 
-def drawBody(k, m, l, bs, blood):
+def drawBody(k, m, blood):
     if blood:
-        pygame.draw.rect(screen, RED, (k+15+l/bs, m+2, 50, 20), border_radius=40)#blood
-    pygame.draw.rect(screen, BLACK, (k+32+l/bs, m+10, 24, 3))#main body
-    pygame.draw.rect(screen, BLACK, (k+51+l/bs, m+8, 8, 8), border_radius=6)#body head
-    pygame.draw.rect(screen, BLACK, (k+20+l/bs, m+8, 14, 2))#body leg
-    pygame.draw.rect(screen, BLACK, (k+20+l/bs, m+13, 14, 2))#body leg
-    pygame.draw.rect(screen, BLACK, (k+45+l/bs, m+7, 2, 4))#body arm
-    pygame.draw.rect(screen, BLACK, (k+45+l/bs, m+13, 2, 4))#body arm
-    pygame.draw.rect(screen, BLACK, (k+45+l/bs, m+5, 7, 2))#body arm
-    pygame.draw.rect(screen, BLACK, (k+45+l/bs, m+17, 7, 2))#body arm
+        pygame.draw.rect(screen, RED, (k+15, m+2, 50, 20), border_radius=40)#blood
+    pygame.draw.rect(screen, BLACK, (k+32, m+10, 24, 3))#main body
+    pygame.draw.rect(screen, BLACK, (k+51, m+8, 8, 8), border_radius=6)#body head
+    pygame.draw.rect(screen, BLACK, (k+20, m+8, 14, 2))#body leg
+    pygame.draw.rect(screen, BLACK, (k+20, m+13, 14, 2))#body leg
+    pygame.draw.rect(screen, BLACK, (k+45, m+7, 2, 4))#body arm
+    pygame.draw.rect(screen, BLACK, (k+45, m+13, 2, 4))#body arm
+    pygame.draw.rect(screen, BLACK, (k+45, m+5, 7, 2))#body arm
+    pygame.draw.rect(screen, BLACK, (k+45, m+17, 7, 2))#body arm
 
 rs = 0.25
 difficulty = 1
@@ -171,28 +171,28 @@ while quit == False:
     if b+turn1*h > 395:
         b=395-turn1*h
     car1 = pygame.Rect(775-h*cs, b+turn1*h, 80, 50)
-    makeCar(h, b, turn1, cs, color1)
+    makeCar(h*cs, b+h*turn1, color1)
     #car2
     if c+turn2*z < 55:
         c=55-turn2*z
     if c+turn2*z > 395:
         c=395-turn2*z
     car2 = pygame.Rect(775-z*cs, c+turn2*z, 80, 50)
-    makeCar(z, c, turn2, cs, color2)
+    makeCar(z*cs, c+z*turn2, color2)
     #car3
     if d+turn3*w < 55:
         d=55-turn3*w
     if d+turn3*w > 395:
         d=395-turn3*w
     car3 = pygame.Rect(775-w*cs, d+turn3*w, 80, 50)
-    makeCar(w, d, turn3, cs, color3)
+    makeCar(w*cs, d+w*turn3, color3)
     #car4
     if e+turn4*v < 50:
         e=55-turn4*v
     if e+turn4*v > 395:
         e=395-turn4*v
     car4 = pygame.Rect(775-v*cs, e+turn4*v, 80, 50)
-    makeCar(v, e, turn4, cs, color4)
+    makeCar(v*cs, e+int(v*turn4), color4)
     pygame.draw.rect(screen, BLACK, (0, 50, 750, 4))#road perimeter
     pygame.draw.rect(screen, BLACK, (0, 448, 750, 4))#road perimeter
     #user car
@@ -244,7 +244,7 @@ while quit == False:
         heavy = font.render('Heavy', True, GREEN)
         heavyRect = heavy.get_rect(center = (415, 310))
         screen.blit(heavy, heavyRect)
-        makeCar(400+(traffic-4)*80, 340, 0, 1, BLUE)
+        makeCar(400+(traffic-4)*80, 340, BLUE)
     elif not user_car.colliderect(car1) and not user_car.colliderect(car2) and not user_car.colliderect(car3) and not user_car.colliderect(car4):
         a+=1
         h+=1
@@ -274,14 +274,14 @@ while quit == False:
             l+=4
             if n>700:
                 l-=2
-            drawBody(k, m, l, bs, False)
+            drawBody(k+l/bs, m, False)
 
             for i in range(0, 8):
                 pygame.draw.rect(screen, BLACK, (k+random.randint(0, 61)+50, m-20+random.randint(0, 91), 3, 3))#---debris
                 pygame.draw.rect(screen, BLACK, (k+random.randint(0, 81)+50, m+random.randint(0, 51), 3, 3))#---debris
         else:
             n=0
-            drawBody(k, m, l, bs, True)
+            drawBody(k+l/bs, m, True)
             for i in end_debris:
                 pygame.draw.rect(screen, BLACK, (k+i[0], m-20+i[1], 3, 3))#---debris
             restart_text = font.render('Press Enter to Play Again', True, WHITE)
@@ -391,7 +391,7 @@ while quit == False:
                     cs = 1.8 + 0.4*difficulty#2.8+0.4
                     user_speed = 1+.125*difficulty
                     titleScreen = False
-    clock.tick(330)
     pygame.display.update()
+    clock.tick(330)
  
 pygame.quit()
