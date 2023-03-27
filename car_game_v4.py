@@ -141,10 +141,11 @@ while quit == False:
     #sidewalk-----
     pygame.draw.rect(screen, light_grey, (0, 0, 750, 50))
     pygame.draw.rect(screen, light_grey, (0, 450, 750, 50))
+    road_offset = a/rs
     for i in range(0, 32):
-        pygame.draw.line(screen, dark_grey, (i*155-a/rs, 0), (i*155-a/rs, 50), width=5)
+        pygame.draw.line(screen, dark_grey, (i*155-road_offset, 0), (i*155-road_offset, 50), width=5)
         #<<top/bottom>>
-        pygame.draw.line(screen, dark_grey, (i*155-a/rs, 450), (i*155-a/rs, 500), width=5)
+        pygame.draw.line(screen, dark_grey, (i*155-road_offset, 450), (i*155-road_offset, 500), width=5)
 	#------sidewalk
 	#lane lines--------
     #for i in range(0, 14): # three lane version
