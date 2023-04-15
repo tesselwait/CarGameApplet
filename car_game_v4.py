@@ -2,7 +2,6 @@ import pygame
 import random
 # Author: Robert Larson
 # Pygame translation of Java Applet
-# v4 - contains bug related to car distance not resetting on first play after resetting traffic
 clock = pygame.time.Clock()
 
 def makeCar(pos_x, pos_y, color):
