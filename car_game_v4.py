@@ -391,6 +391,10 @@ while quit == False:
                 if event.key == pygame.K_RETURN:
                     cs = 1.8 + 0.4*difficulty#2.8+0.4
                     user_speed = 1+.125*difficulty
+	            t = 1233-(1233/traffic)*(1+.7*difficulty)
+		    z = -308+(308/traffic)*(1+.7*difficulty)
+        	    w = -616+(616/traffic)*(1+.7*difficulty)
+        	    v = -932+(932/traffic)*(1+.7*difficulty)
                     titleScreen = False
     pygame.display.update()
     clock.tick(330)
