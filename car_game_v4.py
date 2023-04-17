@@ -257,6 +257,10 @@ while quit == False:
         if down and m<400:
             m+=user_speed
     else:
+        font = pygame.font.SysFont('impact', 30)
+        end_text = font.render('GAME OVER', True, WHITE)
+        endTextRect = end_text.get_rect(center = (350, 230))
+        screen.blit(end_text, endTextRect)
         if rdstp <500:
             a+=0.3
         if rdstp < 900:
@@ -280,17 +284,15 @@ while quit == False:
                 pygame.draw.rect(screen, BLACK, (k+random.randint(0, 61)+50, m-20+random.randint(0, 91), 3, 3))#---debris
                 pygame.draw.rect(screen, BLACK, (k+random.randint(0, 81)+50, m+random.randint(0, 51), 3, 3))#---debris
         else:
+            font = pygame.font.SysFont('impact', 15)
+            restart_text = font.render('Press Enter to Play Again', True, WHITE)
+            restartTextRect = restart_text.get_rect(center = (350, 380))
+            screen.blit(restart_text, restartTextRect)
             n=0
             drawBody(k+l/bs, m, True)
             for i in end_debris:
                 pygame.draw.rect(screen, BLACK, (k+i[0], m-20+i[1], 3, 3))#---debris
-            restart_text = font.render('Press Enter to Play Again', True, WHITE)
-            restartTextRect = end_text.get_rect(center = (350, 380))
-            screen.blit(restart_text, restartTextRect)
-        font = pygame.font.SysFont('impact', 30)
-        end_text = font.render('GAME OVER', True, WHITE)
-        endTextRect = end_text.get_rect(center = (350, 230))
-        screen.blit(end_text, endTextRect)
+
 
     if(a>620):
         a=0
