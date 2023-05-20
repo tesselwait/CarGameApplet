@@ -281,8 +281,8 @@ while quit == False:
             drawBody(k+l/bs, m, False)
 
             for i in range(0, 8):
-                pygame.draw.rect(screen, BLACK, (k+random.randint(0, 61)+50, m-20+random.randint(0, 91), 3, 3))#---debris
-                pygame.draw.rect(screen, BLACK, (k+random.randint(0, 81)+50, m+random.randint(0, 51), 3, 3))#---debris
+                pygame.draw.rect(screen, BLACK, (k+random.randint(0, 61)+30, m-20+random.randint(0, 91), 3, 3))#---debris
+                pygame.draw.rect(screen, BLACK, (k+random.randint(0, 81)+30, m+random.randint(0, 51), 3, 3))#---debris
         else:
             font = pygame.font.SysFont('impact', 15)
             restart_text = font.render('Press Enter to Play Again', True, WHITE)
