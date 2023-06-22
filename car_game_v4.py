@@ -302,7 +302,7 @@ while quit == False:
         b=random.randint(0,340)+55
         turn1 = random.random()/3-.15
     if(z>t):
-        z=0;
+        z=0
         color2 = [random.randint(0, 255), random.randint(0, 255), random.randint(0, 255)]
         c=random.randint(0,340)+55
         turn2 = random.random()/3-.15
@@ -390,7 +390,7 @@ while quit == False:
                         menu_tier-=1
 
                 if event.key == pygame.K_RETURN:
-                    cs = 1.8 + 0.4*difficulty#2.8+0.4
+		    cs = 1.8 + 0.4*difficulty#2.8+0.4
                     user_speed = 1+.125*difficulty
 	            t = 1233-(1233/traffic)*(1+.7*difficulty)
 		    z = -308+(308/traffic)*(1+.7*difficulty)
