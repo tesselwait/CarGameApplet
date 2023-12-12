@@ -388,14 +388,13 @@ while quit == False:
                 elif event.key == pygame.K_w or event.key == pygame.K_UP:
                     if menu_tier > 0:
                         menu_tier-=1
-
                 if event.key == pygame.K_RETURN:
-		    cs = 1.8 + 0.4*difficulty
+                    cs = 1.8 + 0.4*difficulty
                     user_speed = 1+.125*difficulty
-	            t = 1233-(1233/traffic)*(1+.7*difficulty)
-		    z = -308+(308/traffic)*(1+.7*difficulty)
-        	    w = -616+(616/traffic)*(1+.7*difficulty)
-        	    v = -932+(932/traffic)*(1+.7*difficulty)
+                    t = 1233-(1233/traffic)*(1+.7*difficulty)
+                    z = -308+(308/traffic)*(1+.7*difficulty)
+                    w = -616+(616/traffic)*(1+.7*difficulty)
+                    v = -932+(932/traffic)*(1+.7*difficulty)
                     titleScreen = False
     pygame.display.update()
     clock.tick(330)
